@@ -15,9 +15,10 @@ class HomepageController extends AbstractController
     #[Route('/', name: 'homepage')]
     public function index(): Response
     {
-        return new JsonResponse(([
-            "message" => "Hello, world!",
-            "timestamp" => date('Y-m-d H:i:s', time())
-        ]));
+        # return new JsonResponse(([
+        #   "message" => "Hello, world!",
+        #    "timestamp" => date('Y-m-d H:i:s', time())
+        # ]));
+        return $this->render('homepage/index.html.twig');
     }
 }
